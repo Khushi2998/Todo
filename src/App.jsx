@@ -1,99 +1,143 @@
-import { useState , useEffect} from 'react'
-import Navbar from './components/Navbar'
-import { v4 as uuidv4 } from 'uuid';
-
-
+import { useEffect, useState } from "react";
+import api from "./api";
 
 
 function App() {
-  const [todo, setTodo] = useState("")
-  const [todos,setTodos] = useState([])
+  const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    let todoString = localStorage.getItem("todos")
-    if(todoString){
-      setTodos(JSON.parse(todoString))
+    const fetchTodos = async () => {
+      try {
+        const res = await api.get("/todo");
+        setTodos(res.data || []);
+      } catch (err) {
+        console.error("Error fetching todos:", err);
+      }
+    };
+    fetchTodos();
+  }, []);
+
+  const handleAdd = async () => {
+    if (!todo.trim()) return;
+    try {
+      const res = await api.post("/todo", { description: todo, isCompleted: false });
+      setTodos([...todos, res.data]);
+      setTodo("");
+    } catch (err) {
+      console.error("Error adding todo:", err);
     }
-  },[])
+  };
 
-     const saveToLS = (items) => {
-    localStorage.setItem("todos", JSON.stringify(items))
-  }
+  const handleDelete = async (id) => {
+    try {
+      await api.delete(`/todo/${id}`);
+      setTodos(todos.filter(t => t.id !== id));
+    } catch (err) {
+      console.error("Error deleting todo:", err);
+    }
+  };
 
-  const handleEdit = (e, id) => {
-    const t = todos.find(i=>i.id === id)
-     setTodo(t.todo)
-    const newTodos = todos.filter(item=>{
-      return item.id !==id
-    })
-    setTodos(newTodos)
-    saveToLS(newTodos)
+  const handleToggle = async (id) => {
+    try {
+      const todoItem = todos.find(t => t.id === id);
+      if (!todoItem) return;
 
-  }
+      const updatedItem = { id: todoItem.id, description: todoItem.description, isCompleted: !todoItem.isCompleted };
+      await api.put(`/todo/${id}`, updatedItem);
 
-  const handleDelete = (e, id) => {
-  
-    const newTodos = todos.filter(item => item.id!==id);
-    
-    setTodos("")
-    saveToLS(newTodos)
+      setTodos(todos.map(t => t.id === id ? { ...t, isCompleted: !t.isCompleted } : t));
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-  }
-  
+  const handleEdit = async (id) => {
+    const newText = prompt("Edit todo:", todos.find(t => t.id === id)?.description);
+    if (!newText) return;
+    handleEditSave(id, newText);
+  };
 
-  const handleAdd = () => {
-      if(!todo.trim()) return
-      const newTodos=([...todos, {id: uuidv4(), todo, isCompleted: false}])
-      setTodos(newTodos)
-      setTodo("")
-      saveToLS(newTodos)
-  }
+  const handleEditSave = async (id, updatedText) => {
+    try {
+      const todoItem = todos.find(t => t.id === id);
+      if (!todoItem) return;
 
-  const handleChange = (e) => {
-      setTodo(e.target.value)
-  }
-  const handleCheckbox = (e) => {
-  const id = e.target.name;
-  const newTodos = todos.map(item =>
-    item.id === id ? { ...item, isCompleted: !item.isCompleted } : item
-  );
-  setTodos(newTodos)
-  saveToLS(newTodos)
-};
+      const updatedItem = { id: todoItem.id, description: updatedText, isCompleted: todoItem.isCompleted };
+      await api.put(`/todo/${id}`, updatedItem);
 
- return(
-    <>
-  
-    <Navbar/>
-       <div className="container mx-auto my-5 rounded-xl p-5 bg-violet-100 min-h-full">
-         <div className="addTodo">
-          <h2 className='text-lg font-bold'>Add a Todo</h2>
-          <input onChange={handleChange} value={todo} type="text" className="bg-white text-black border border-gray-400 p-2 rounded-md mx-6" />
-                  <button onClick={handleAdd} className="bg-violet-500 hover:bg-violet-950 text-white px-3 py-1 rounded-md mx-6 ">
-                  Save </button>
-         </div>
-          <h2 className='text-lg font-bold'>Your Todos</h2>
-        <div className="todos">
-          {todos.length===0 && <div className='m-5'>No Todos to display</div>}
-          {todos.map(item=>{
+      setTodos(todos.map(t => t.id === id ? { ...t, description: updatedText } : t));
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-            return <div key={item.id} className="flex w-1/4 my-3 justify-between">
-              <div className="flex gap-5">
-                  <input name={item.id}
-                  onChange={handleCheckbox} type="checkbox" checked={item.isCompleted} id="" />
-                  <div className={item.isCompleted?"line-through":""}> {item.todo}</div>
-               </div>
-              <div className="buttons flex h-full">
-                 <button onClick={(e) =>handleEdit(e, item.id)} className="bg-violet-500 hover:bg-violet-950 text-white px-3 py-1 rounded-md mx-6">Edit</button>
-                 <button onClick={(e) =>{handleDelete(e,item.id)}} className="bg-violet-500 hover:bg-violet-950 text-white px-3 py-1 rounded-md mx-6 ">Delete</button>
-              </div>
-            </div>
-            })}
-        </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-purple-200 via-pink-100 to-blue-200 flex flex-col items-center p-6">
+      <h1 className="text-5xl font-bold text-gray-800 mb-10">Todo App</h1>
+
+      {/* Add Todo */}
+      <div className="w-full max-w-xl flex gap-3 mb-8">
+        <input
+          type="text"
+          value={todo}
+          onChange={(e) => setTodo(e.target.value)}
+          placeholder="Add a new task..."
+          className="flex-1 p-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow"
+        />
+        <button
+          onClick={handleAdd}
+          className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl hover:scale-105 transform transition-transform shadow-lg font-bold
+"
+         
+        >
+          Add
+        </button>
       </div>
 
-    </>
- )
+      {/* Todos */}
+      {todos.length === 0 ? (
+        <p className="text-gray-700 text-lg">No todos yet. Add one above!</p>
+      ) : (
+        <ul className="w-full max-w-xl space-y-4">
+          {todos.map((item) => (
+            <li
+              key={item.id}
+              className="flex justify-between items-center bg-white p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-1"
+            >
+              <div className="flex items-center gap-4">
+                <input
+                  type="checkbox"
+                  checked={item.isCompleted}
+                  onChange={() => handleToggle(item.id)}
+                  className="w-6 h-6 accent-purple-600"
+                />
+                <span className={`text-lg font-medium ${item.isCompleted ? "line-through text-gray-400" : "text-gray-800"}`}>
+                  {item.description}
+                </span>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => handleEdit(item.id)}
+                  className="text-purple-600 hover:text-purple-800 font-medium transition"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDelete(item.id)}
+                  className="text-gray-500 hover:text-gray-700 font-medium transition"
+                >
+                  Delete
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
+
+

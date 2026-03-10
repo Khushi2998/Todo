@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cupl\\source\\repos\\DataEntry\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\custommiddleware\\loggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\custommiddleware\\loggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\data\\tododbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\data\\tododbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\models\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\models\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\models\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\models\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|c:\\users\\cupl\\source\\repos\\dataentry\\dataentry\\dataentry.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F168087C-9F90-4C71-AD04-5545ECE51F28}|DataEntry\\DataEntry.csproj|solutionrelative:dataentry\\dataentry.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoggingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\CustomMiddleware\\LoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "DataEntry\\CustomMiddleware\\LoggingMiddleware.cs",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\CustomMiddleware\\LoggingMiddleware.cs",
+              "RelativeToolTip": "DataEntry\\CustomMiddleware\\LoggingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T05:38:01.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ToDoController.cs",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Controllers\\ToDoController.cs",
+              "RelativeDocumentMoniker": "DataEntry\\Controllers\\ToDoController.cs",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Controllers\\ToDoController.cs",
+              "RelativeToolTip": "DataEntry\\Controllers\\ToDoController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T05:49:25.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ToDoItem.cs",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Models\\ToDoItem.cs",
+              "RelativeDocumentMoniker": "DataEntry\\Models\\ToDoItem.cs",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Models\\ToDoItem.cs",
+              "RelativeToolTip": "DataEntry\\Models\\ToDoItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T05:57:49.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ToDoService.cs",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Models\\ToDoService.cs",
+              "RelativeDocumentMoniker": "DataEntry\\Models\\ToDoService.cs",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Models\\ToDoService.cs",
+              "RelativeToolTip": "DataEntry\\Models\\ToDoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:30:31.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\appsettings.json",
+              "RelativeDocumentMoniker": "DataEntry\\appsettings.json",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\appsettings.json",
+              "RelativeToolTip": "DataEntry\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-18T06:36:16.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataEntry.csproj",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\DataEntry.csproj",
+              "RelativeDocumentMoniker": "DataEntry\\DataEntry.csproj",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\DataEntry.csproj",
+              "RelativeToolTip": "DataEntry\\DataEntry.csproj",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-18T06:26:35.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Program.cs",
+              "RelativeDocumentMoniker": "DataEntry\\Program.cs",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Program.cs",
+              "RelativeToolTip": "DataEntry\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:27:49.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TodoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Data\\TodoDbContext.cs",
+              "RelativeDocumentMoniker": "DataEntry\\Data\\TodoDbContext.cs",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Data\\TodoDbContext.cs",
+              "RelativeToolTip": "DataEntry\\Data\\TodoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T09:58:33.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IToDoService.cs",
+              "DocumentMoniker": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Models\\IToDoService.cs",
+              "RelativeDocumentMoniker": "DataEntry\\Models\\IToDoService.cs",
+              "ToolTip": "C:\\Users\\cupl\\source\\repos\\DataEntry\\DataEntry\\Models\\IToDoService.cs",
+              "RelativeToolTip": "DataEntry\\Models\\IToDoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T16:25:40.821Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
